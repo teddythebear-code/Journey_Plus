@@ -187,7 +187,7 @@
                 <div class="form-group">
                     <textarea class="form-input" placeholder="Tell us about your transportation needs..." id="message" required></textarea>
                 </div>
-                <button type="button" class="btn" id="submit-form">Send Message</button>
+                <button type="button" class="btn" id="submit-form" onclick="sendmail()">Send Message</button>
                 <p class="success-message" id="success-message">Your message has been sent! We'll get back to you soon.</p>
             </div>
         </div>
@@ -240,6 +240,21 @@
             <p>Your message has been sent successfully. We'll be in touch with you shortly via email.</p>
         </div>
     </div>
+
+    //the EmailJS.com link for the email receiver section 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "zatpJBynvGv5lL3WV",
+      });
+   })();
+</script>
+
+
     <script src="js/index.js"></script>
+
 </body>
 </html>

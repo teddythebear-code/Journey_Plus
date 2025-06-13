@@ -79,9 +79,23 @@
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
+
+        //teddythebear code for mail receiver 
+
+        function sendmail(){
+            let parmt = {
+                name : name,
+                email : email,
+                phone : phone,
+                message : message,
+            }
+
+            emailjs.send("service_12phka2","template_mmeoe47",parmt).then(alert(Email_sent))
+        }
         
-        if (name && email && message) {
+       if (name && email && message) {
             // In a real implementation, you would send this data to your server
             // For this demo, we'll just show the success message and modal
             
