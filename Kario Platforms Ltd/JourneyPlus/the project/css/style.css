@@ -105,14 +105,16 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(0, 54, 181, 0.7), rgba(2, 26, 80, 0.7)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+            background-image: url('img/vince-veras-AJIqZDAUD7A-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;
-            color: white;
-            position: relative;
+            /*position: relative;*/
         }
-        
+
+
         .hero-content {
             max-width: 700px;
             margin-left: 5%;

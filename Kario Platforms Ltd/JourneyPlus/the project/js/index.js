@@ -85,7 +85,7 @@
         //teddythebear code for mail receiver 
 
         function sendmail() {
-            
+
         const templateParams = {
             name : name,
             email : email,
@@ -96,10 +96,11 @@
         
             emailjs
             .send("service_12phka2","template_mmeoe47", templateParams)
-            .then(() => alert("email sent").catch(() => alert ("email not sent"))
-        );
+            .then(() => alert("email sent"))
+            .catch(() => alert ("email not sent"));
+        
 
-            }
+    }   
 
        if (name && email && message) {
             // In a real implementation, you would send this data to your server
