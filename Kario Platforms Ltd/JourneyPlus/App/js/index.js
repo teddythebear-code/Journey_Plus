@@ -1,4 +1,5 @@
-    // Toggle mobile menu
+
+       // Toggle mobile menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -79,12 +80,9 @@
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
-
-  
-
-       if (name && email && message) {
+        
+         if (name && email && message) {
         // Send data to Formspree
         fetch('https://formspree.io/f/xkgbpyav', { // 👈 REPLACE WITH YOUR URL
             method: 'POST',

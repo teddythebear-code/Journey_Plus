@@ -1,5 +1,4 @@
-
-        :root {
+  :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
             --secondary: #0f172a;
@@ -105,16 +104,14 @@
         }
         
         .hero {
-            background-image: url('img/vince-veras-AJIqZDAUD7A-unsplash.jpg');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0, 54, 181, 0.7), rgba(2, 26, 80, 0.7)), url('/api/placeholder/1920/1080') center/cover no-repeat;
             height: 100vh;
             display: flex;
             align-items: center;
-            /*position: relative;*/
+            color: white;
+            position: relative;
         }
-
-
+        
         .hero-content {
             max-width: 700px;
             margin-left: 5%;
