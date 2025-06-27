@@ -80,11 +80,12 @@
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
         
-         if (name && email && message) {
+         if (name && email && phone && message) {
         // Send data to Formspree
-        fetch('https://formspree.io/f/xkgbpyav', { // 👈 REPLACE WITH YOUR URL
+        fetch('https://formspree.io/f/mpwrkrag', { // 👈 ADD YOUR URL FORMSPREE
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, phone, message })
