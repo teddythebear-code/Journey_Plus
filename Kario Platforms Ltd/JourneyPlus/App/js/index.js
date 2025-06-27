@@ -82,40 +82,30 @@
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
 
-        //teddythebear code for mail receiver 
-
-        function sendmail() {
-
-        const templateParams = {
-            name : name,
-            email : email,
-            phone : phone,
-            message : message,
-        }
-            
-        
-            emailjs
-            .send("service_12phka2","template_mmeoe47", templateParams)
-            .then(() => alert("email sent"))
-            .catch(() => alert ("email not sent"));
-        
-
-    }   
+  
 
        if (name && email && message) {
-            // In a real implementation, you would send this data to your server
-            // For this demo, we'll just show the success message and modal
-            
-            // Normally you would use server-side code like this:
-            // const formData = new FormData();
-            // formData.append('name', name);
-            // formData.append('email', email);
-            // formData.append('message', message);
-            // fetch('your-endpoint', {
-            //     method: 'POST',
-            //     body: formData
-            // })
-            
+        // Send data to Formspree
+        fetch('https://formspree.io/f/xkgbpyav', { // 👈 REPLACE WITH YOUR URL
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, message })
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show success UI
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    emailModal.classList.add('active');
+                    // Reset form
+                    document.getElementById('contact-form').reset(); // 👈 ADD FORM ID HERE
+                }, 1000);
+            } else {
+                alert("Error submitting form!");
+            }
+        })
+        .catch(error => alert("Network error!"));
+    
             // Display success message
             successMessage.style.display = 'block';
             
